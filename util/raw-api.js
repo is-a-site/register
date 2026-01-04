@@ -15,15 +15,15 @@ const v2 = [];
 
 for (const subdomain of internal) {
     const commonData = {
-        domain: `${subdomain}.is-a.dev`,
+        domain: `${subdomain}.is-a.site`,
         subdomain: subdomain,
         owner: {
-            username: "is-a-dev"
+            username: "is-a-site"
         }
     };
 
     const records = {
-        CNAME: "internal.is-a.dev"
+        CNAME: "internal.is-a.site"
     };
 
     v2.push({
@@ -35,15 +35,15 @@ for (const subdomain of internal) {
 
 for (const subdomain of reserved) {
     const commonData = {
-        domain: `${subdomain}.is-a.dev`,
+        domain: `${subdomain}.is-a.site`,
         subdomain: subdomain,
         owner: {
-            username: "is-a-dev"
+            username: "is-a-site"
         }
     };
 
     const records = {
-        URL: "https://is-a.dev/reserved"
+        URL: "https://is-a.site/reserved"
     };
 
     v2.push({
@@ -67,7 +67,7 @@ fs.readdir(directoryPath, function (err, files) {
             const item = JSON.parse(data);
             const name = path.parse(file).name;
 
-            item.domain = name + ".is-a.dev";
+            item.domain = name + ".is-a.site";
             item.subdomain = name;
 
             delete item.owner.email;
