@@ -2,7 +2,7 @@ var domainName = "is-a.site";
 var registrar = NewRegistrar("none");
 var dnsProvider = DnsProvider(NewDnsProvider("cloudflare"));
 
-function getDomainsList(filesPath) {
+function getDomainsList(filesPath) { 
     var result = [];
     var files = glob.apply(null, [filesPath, true, ".json"]);
 
